@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig', # Our users app customer user model
+    'pages.apps.PagesConfig', # Our pages app
 ]
 
 MIDDLEWARE = [
