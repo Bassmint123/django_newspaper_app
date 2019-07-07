@@ -130,4 +130,15 @@ AUTH_USER_MODEL = 'users.CustomUser' # Setting up the user model
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+##### Setting up Email #####
+# If we are using the console instead of SendGrid, we would specify 'console' like this...
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# 
+# For using SendGrid with SMTP we will use the following...
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
